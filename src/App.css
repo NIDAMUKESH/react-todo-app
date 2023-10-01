@@ -1,0 +1,198 @@
+/* app.css */
+.App {
+  text-align: center;
+  /* margin-top: 20px; */
+  /* background-color: #524d4d; */
+}
+
+.todo-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  padding: 10px;
+  margin-right: 10px;
+}
+
+button {
+  padding: 10px;
+  background-color: #97b131;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.todos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.todo {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+  background-color: #696464;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #97b131;
+  margin-left: 10px;
+}
+
+button:hover {
+  background-color: #ea8d8d;
+}
+
+/* Reset some default styles */
+body, h1, ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Basic styling for the entire app */
+.App {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  background-color: #bbb8b8; /* Change the background color */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: background-color 0.5s; /* Add a background color transition */
+}
+
+.container {
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 20px;
+  width: 300px;
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Styling for the input and add button */
+.todo-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-bottom: 2px solid #007BFF;
+  outline: none;
+  margin-bottom: 10px;
+}
+
+.add-button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  border-radius: 4px;
+}
+
+.add-button:hover {
+  background-color: #0056b3;
+}
+
+/* Styling for the todo list */
+.todo-list {
+  list-style: none;
+  padding: 0;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: transform 0.2s ease-in-out, background-color 0.2s; /* Add transform and background-color transitions */
+}
+
+.todo-item:hover {
+  transform: scale(1.02);
+  background-color: #f0f0f0; /* Change the background color on hover */
+}
+
+.todo-text {
+  flex-grow: 1;
+  font-size: 18px;
+}
+
+.delete-button {
+  background-color: #97b131;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  border-radius: 4px;
+}
+
+.delete-button:hover {
+  background-color: #FF3B3B;
+}
+
+/* Add animation for clearing completed items */
+.todo-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #ccc;
+}
+
+.clear-button {
+  background-color: #0056b3;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  border-radius: 4px;
+}
+
+.clear-button:hover {
+  background-color: #FF3B3B;
+}
+
+/* Add a fade-in animation for new items */
+.todo-item-enter {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.todo-item-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Add a fade-out animation for deleted items */
+.todo-item-exit {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.todo-item-exit-active {
+  opacity: 0;
+  transform: translateY(-20px);
+}
